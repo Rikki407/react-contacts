@@ -1,0 +1,51 @@
+.person {
+    position: relative;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(112, 108, 114, 0.3);
+    cursor: pointer;
+}
+
+.person:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.person__avatar img {
+    width: 56px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+
+.person__avatar {
+    position: relative;
+    display: inline-block;
+}
+
+.person__info {
+    display: inline-block;
+    width: 200px;
+    padding: 0 0 0 10px;
+}
+
+.person__name,
+.person__statusMsg {
+    display: inline-block;
+}
+
+.person__name {
+    color: #fdfdfd;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.person__statusMsg {
+    width: 180px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
