@@ -1,5 +1,6 @@
 import './App.css';
 import Contacts from './Components/Contacts';
+import SearchForm from './Components/SearchForm';
 
 function App() {
     return (
@@ -7,7 +8,9 @@ function App() {
             <div className="wrapper">
                 <div className="content">
                     <div className="sidebar">
-                        {/* search form */}
+                        <div className="search-form-container">
+                            <SearchForm />
+                        </div>
                         <Contacts />
                     </div>
                 </div>

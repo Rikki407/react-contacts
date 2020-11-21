@@ -1,0 +1,35 @@
+.wrapper {
+    width: 100%;
+}
+
+.content {
+    width: 736px;
+    height: 560px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar {
+    float: left;
+    width: 100%;
+    max-width: 296px;
+    height: 100%;
+    background: #2b2130;
+    border-radius: 10px 0 0 10px;
+}
+
+.search-form-container {
+    padding: 20px 15px 2px 25px;
+}
+
+.chatbox {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+    background: #fdfdfd;
+    border-radius: 0 10px 10px 0;
+    box-shadow: inset 20px 0 30px -20px rgba(0, 0, 0, 0.6);
+}

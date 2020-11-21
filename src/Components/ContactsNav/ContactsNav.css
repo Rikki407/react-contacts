@@ -1,0 +1,41 @@
+.contactsNav ul {
+    padding: 0 10px 0 25px;
+    margin-bottom: 9px;
+    list-style-type: 0;
+    text-transform: uppercase;
+}
+
+.contactsNav li {
+    display: inline;
+    margin-right: 20px;
+    height: 24px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.contactsNav li a {
+    color: #706c72;
+}
+
+.contactsNav li a:hover {
+    color: #bababa;
+}
+
+.contactsNav li.active a {
+    color: #bababa;
+}
+
+.contactsNav li:last-child {
+    float: right;
+    margin: 0;
+}
+
+.contactsNav li:last-child svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.contactsNav li:last-child svg path {
+    fill: #bababa;
+}

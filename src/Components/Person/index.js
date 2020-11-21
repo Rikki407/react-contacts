@@ -10,7 +10,7 @@ const Person = ({ name, imgSrc, statusMessage, lastMessage }) => {
             <span className="person__info">
                 <span className="person__name">{name}</span>
                 <span className="person__statusMsg">{statusMessage}</span>
-                <span class="lastMessage">{lastMessage}</span>
+                <span className="person__lastMessage">{lastMessage}</span>
             </span>
         </div>
     );

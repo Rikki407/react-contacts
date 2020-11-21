@@ -47,7 +47,7 @@
     text-overflow: ellipsis;
 }
 
-.lastMessage {
+.person__lastMessage {
     position: absolute;
     top: 10px;
     right: 10px;
