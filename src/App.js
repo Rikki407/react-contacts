@@ -1,4 +1,5 @@
 import './App.css';
+import ChatboxHeader from './Components/ChatboxHeader';
 import Contacts from './Components/Contacts';
 import SearchForm from './Components/SearchForm';
 
@@ -13,6 +14,7 @@ function App() {
                         </div>
                         <Contacts />
                     </div>
+                    <ChatboxHeader />
                 </div>
             </div>
         </div>

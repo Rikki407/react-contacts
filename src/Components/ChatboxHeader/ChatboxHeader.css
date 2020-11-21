@@ -1,0 +1,78 @@
+.chatbox {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+    background: #fdfdfd;
+    border-radius: 0 10px 10px 0;
+    box-shadow: inset 20px 0 30px -20px rgba(0, 0, 0, 0.6);
+    color: #a0a0a0;
+}
+
+.chatbox__person {
+    position: relative;
+    margin: 12px 20px 0 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(112, 108, 114, 0.2);
+}
+
+.chatbox__avatar img {
+    width: 56px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+
+.chatbox__avatar {
+    position: relative;
+    display: inline-block;
+}
+
+.chatbox__status {
+    border-color: #fff;
+}
+
+.chatbox__info {
+    display: inline-block;
+    padding: 0 0 0 20px;
+    width: 290px;
+}
+
+.chatbox__name {
+    font-weight: 700;
+    color: #a0a0a0;
+    font-size: 1.9rem;
+    display: inline-block;
+}
+
+.chatbox__loginStatus {
+    display: block;
+}
+
+.chatbox__callBtn {
+    position: absolute;
+    top: 14px;
+    right: 6px;
+    background: none;
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid #a0a0a0;
+    cursor: pointer;
+}
+
+.chatbox__callBtn:hover,
+.chatbox__callBtn:focus {
+    opacity: 0.6;
+}
+
+.chatbox__callBtn svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.chatbox__callBtn svg path {
+    fill: #a0a0a0;
+}
