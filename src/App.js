@@ -8,7 +8,7 @@ function App() {
             <div className="wrapper">
                 <div className="content">
                     <div className="sidebar">
-                        <div className="search-form-container">
+                        <div className="searchForm__container">
                             <SearchForm />
                         </div>
                         <Contacts />
