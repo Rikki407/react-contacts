@@ -1,0 +1,76 @@
+.messageForm__container {
+    width: 400px;
+    height: 74px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 20px;
+    border-top: 1px solid rgba(112, 108, 114, 0.2);
+}
+
+.messageForm textarea {
+    width: 290px;
+    margin: 6px 0 0 24px;
+    resize: none;
+    border: 0;
+    color: #a0a0a0;
+    outline: 0;
+}
+
+.messageForm textarea::-webkit-input-placeholder {
+    color: #a0a0a0;
+}
+.messageForm textarea::-moz-placeholder {
+    color: #a0a0a0;
+}
+.message-form textarea::-ms-placeholder {
+    color: #a0a0a0;
+}
+.messageForm textarea:-moz-placeholder {
+    color: #a0a0a0;
+}
+
+.messageForm textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+.messageForm textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+.messageForm textarea:focus::-ms-placeholder {
+    color: transparent;
+}
+.messageForm textarea:focus:-moz-placeholder {
+    color: transparent;
+}
+
+.messageForm__sendBtn {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: #0bf9c7;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(11, 249, 199, 0.4);
+    cursor: pointer;
+}
+
+.messageForm__sendBtn:hover,
+.messageForm__sendBtn:focus {
+    opacity: 0.6;
+}
+
+.messageForm__sendBtn svg {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 34px;
+    height: 34px;
+    vertical-align: middle;
+}
+
+.messageForm__sendBtn svg path {
+    fill: none;
+    stroke: #fff;
+}

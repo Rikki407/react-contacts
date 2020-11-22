@@ -2,6 +2,7 @@ import './App.css';
 import ChatboxHeader from './Components/ChatboxHeader';
 import Contacts from './Components/Contacts';
 import MessageBody from './Components/MessageBody';
+import MessageForm from './Components/MessageForm';
 import SearchForm from './Components/SearchForm';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                             name="Debby Jones"
                         />
                         <MessageBody />
+                        <MessageForm />
                     </div>
                 </div>
             </div>
