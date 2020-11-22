@@ -21,7 +21,7 @@ const SearchForm = () => {
                     </svg>
                 </span>
 
-                <label for="search">Search</label>
+                <label>Search</label>
                 <input
                     id="search"
                     name="search"

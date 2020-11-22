@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { nanoid } from 'nanoid';
 
 import ContactsNav from '../ContactsNav';
 import Person from '../Person';
@@ -14,8 +13,7 @@ const Contacts = () => {
             <ContactsNav />
             <div className="contactList">
                 {contactList.map((person) => {
-                    const id = nanoid();
-                    return <Person {...person} key={id} />;
+                    return <Person {...person} key={person.id} />;
                 })}
             </div>
         </div>

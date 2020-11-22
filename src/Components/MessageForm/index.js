@@ -1,13 +1,49 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { ChatboxContext } from '../../ChatboxContext';
 import './MessageForm.css';
 const MessageForm = () => {
+    const [newMessage, setNewMessage] = useState('');
+    const { profile, contacts } = useContext(ChatboxContext);
+    const [details, setDetails] = profile;
+    const [contactList, setContactList] = contacts;
+
+    const updateNewMessage = (e) => {
+        setNewMessage(e.target.value);
+    };
+
+    const sendMessage = (e) => {
+        e.preventDefault();
+        setDetails((oldDetails) => {
+            const oldMessages = oldDetails.messages;
+            const updatedMessages = [
+                ...oldMessages,
+                { message: newMessage, timeDelivered: '2:30 PM' },
+            ];
+            return { ...oldDetails, messages: updatedMessages };
+        });
+        setContactList((oldContactList) => {
+            const newContactList = [...oldContactList];
+            const oldMessages = newContactList[details.id].messages;
+            const updatedMessages = [
+                ...oldMessages,
+                { message: newMessage, timeDelivered: '2:30 PM' },
+            ];
+            newContactList[details.id].messages = updatedMessages;
+            console.log(newContactList[details.id].messages);
+            return newContactList;
+        });
+        setNewMessage('');
+    };
+
     return (
         <div className="messageForm__container">
-            <form className="messageForm" action="" method="">
+            <form className="messageForm" onSubmit={sendMessage}>
                 <textarea
                     id="message"
                     name="message"
                     placeholder="Type a message here..."
+                    value={newMessage}
+                    onChange={updateNewMessage}
                 ></textarea>
                 <button className="messageForm__sendBtn" type="submit">
                     <svg

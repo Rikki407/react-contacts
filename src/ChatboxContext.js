@@ -4,6 +4,7 @@ export const ChatboxContext = createContext();
 
 export const DetailProvider = (props) => {
     const [details, setDetails] = useState({
+        id: 0,
         imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_1.jpg',
         name: 'Sacha Griffin',
         messages: [
@@ -22,6 +23,7 @@ export const DetailProvider = (props) => {
 
     const [contactList, setContactList] = useState([
         {
+            id: 0,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_1.jpg',
             name: 'Sacha Griffin',
             statusMessage: 'Super deep status message blah blah',
@@ -40,6 +42,7 @@ export const DetailProvider = (props) => {
             ],
         },
         {
+            id: 1,
             imgSrc:
                 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_2.jpeg',
             name: 'Debby Jones',
@@ -58,6 +61,7 @@ export const DetailProvider = (props) => {
             ],
         },
         {
+            id: 2,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_3.jpg',
             name: 'Sacha Griffin',
             statusMessage: 'Life becomes more peaceful when',
@@ -65,6 +69,7 @@ export const DetailProvider = (props) => {
             messages: [],
         },
         {
+            id: 3,
             imgSrc:
                 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_4.jpeg',
             name: 'Johhny McGrump',
@@ -73,6 +78,7 @@ export const DetailProvider = (props) => {
             messages: [],
         },
         {
+            id: 4,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_5.jpg',
             name: 'Tommy Tom',
             statusMessage: 'On vacation for two weeks',
@@ -80,6 +86,7 @@ export const DetailProvider = (props) => {
             messages: [],
         },
         {
+            id: 5,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_1.jpg',
             name: 'Sacha Griffin',
             statusMessage: 'Super deep status message blah blah',
@@ -87,6 +94,7 @@ export const DetailProvider = (props) => {
             messages: [],
         },
         {
+            id: 6,
             imgSrc:
                 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_2.jpeg',
             name: 'Debby Jones',
@@ -95,6 +103,7 @@ export const DetailProvider = (props) => {
             messages: [],
         },
         {
+            id: 7,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_3.jpg',
             name: 'Sacha Griffin',
             statusMessage: 'Life becomes more peaceful when',
@@ -102,6 +111,7 @@ export const DetailProvider = (props) => {
             messages: [],
         },
         {
+            id: 8,
             imgSrc:
                 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_4.jpeg',
             name: 'Johhny McGrump',
@@ -110,6 +120,7 @@ export const DetailProvider = (props) => {
             messages: [],
         },
         {
+            id: 9,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_5.jpg',
             name: 'Tommy Tom',
             statusMessage: 'On vacation for two weeks',
@@ -117,6 +128,7 @@ export const DetailProvider = (props) => {
             messages: [],
         },
         {
+            id: 10,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_1.jpg',
             name: 'Sacha Griffin',
             statusMessage: 'Super deep status message blah blah',
