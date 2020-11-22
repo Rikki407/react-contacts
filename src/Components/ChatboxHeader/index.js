@@ -1,18 +1,18 @@
 import React from 'react';
 import './ChatboxHeader.css';
 
-const Chatbox = () => {
+const ChatboxHeader = ({imgSrc, name}) => {
     return (
-        <div className="chatbox">
+        
             <div className="chatbox__person">
                 <span className="chatbox__avatar">
                     <img
-                        src="http://vzkiss.com/demo/chatbox/images/avatar/avatar_2.jpeg"
+                        src={imgSrc}
                         alt="Debby Jones"
                     />
                 </span>
                 <span className="chatbox__info">
-                    <span className="chatbox__name">Debby Jones</span>
+                    <span className="chatbox__name">{name}</span>
                     <span className="chatbox__loginStatus">
                         Online | 11:33 PM, Las Vegas, Nevada
                     </span>
@@ -26,8 +26,8 @@ const Chatbox = () => {
                     </button>
                 </span>
             </div>
-        </div>
+        
     );
 };
 
-export default Chatbox;
+export default ChatboxHeader;

@@ -1,6 +1,7 @@
 import './App.css';
 import ChatboxHeader from './Components/ChatboxHeader';
 import Contacts from './Components/Contacts';
+import MessageBody from './Components/MessageBody';
 import SearchForm from './Components/SearchForm';
 
 function App() {
@@ -9,12 +10,16 @@ function App() {
             <div className="wrapper">
                 <div className="content">
                     <div className="sidebar">
-                        <div className="searchForm__container">
-                            <SearchForm />
-                        </div>
+                        <SearchForm />
                         <Contacts />
                     </div>
-                    <ChatboxHeader />
+                    <div className="chatbox">
+                        <ChatboxHeader
+                            imgSrc="http://vzkiss.com/demo/chatbox/images/avatar/avatar_2.jpeg"
+                            name="Debby Jones"
+                        />
+                        <MessageBody />
+                    </div>
                 </div>
             </div>
         </div>
