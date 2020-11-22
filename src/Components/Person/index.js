@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ChatboxContext } from '../../ChatboxContext';
 import './Person.css';
 
 const Person = ({ name, imgSrc, statusMessage, lastMessage }) => {
+    const { header } = useContext(ChatboxContext);
+    const [details, setDetails] = header;
+    const changeChatBox = () => {
+        setDetails({ name: name, imgSrc: imgSrc });
+    };
+
     return (
-        <div className="person">
+        <div className="person" onClick={changeChatBox}>
             <span className="person__avatar">
                 <img src={imgSrc} alt="Rishab Lamba" />
             </span>
