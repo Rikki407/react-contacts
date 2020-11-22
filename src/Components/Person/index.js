@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { ChatboxContext } from '../../ChatboxContext';
 import './Person.css';
 
-const Person = ({ name, imgSrc, statusMessage, lastMessage }) => {
-    const { header } = useContext(ChatboxContext);
-    const [details, setDetails] = header;
+const Person = ({ name, imgSrc, statusMessage, lastMessage, messages }) => {
+    const { profile } = useContext(ChatboxContext);
+    const [details, setDetails] = profile;
     const changeChatBox = () => {
-        setDetails({ name: name, imgSrc: imgSrc });
+        setDetails({ name: name, imgSrc: imgSrc, messages: messages });
     };
 
     return (

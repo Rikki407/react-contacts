@@ -3,8 +3,8 @@ import { ChatboxContext } from '../../ChatboxContext';
 import './ChatboxHeader.css';
 
 const ChatboxHeader = () => {
-    const { header } = useContext(ChatboxContext);
-    const [details, setDetails] = header;
+    const { profile } = useContext(ChatboxContext);
+    const [details, setDetails] = profile;
     return (
         <div className="chatbox__person">
             <span className="chatbox__avatar">

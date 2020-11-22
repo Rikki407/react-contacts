@@ -1,26 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { nanoid } from 'nanoid';
+import { ChatboxContext } from '../../ChatboxContext';
 import SenderMessage from '../SenderMessage';
 import './MessageBody.css';
 
 const MessageBody = () => {
+    const { profile } = useContext(ChatboxContext);
+    const [details, setDetails] = profile;
     return (
         <div className="messageBody">
-            <SenderMessage
-                message="Suspendisse imperdiet nunc ac pellentes Integer
-                            mollis nisi nec nisl fauciubs. Curabitur bibendum
-                            ullamcorper lorem, in bibendum dui euismod gravida."
-                timeDelivered="10:29 PM"
-            />
-            <SenderMessage
-                message="Cras ut ante consequat, luctus massa
-                                            vel, sodales orci."
-                timeDelivered="10:27 PM"
-            />
-            <SenderMessage message="XOXO" timeDelivered="10:28 PM" />
-            <SenderMessage
-                message="Aliquam maximus lacinia nisl nec as. Donec rhoncus efficitur augue, vitae"
-                timeDelivered="10:29 PM"
-            />
+            {details.messages.map((obj) => {                
+                const id = nanoid();
+                return (
+                    <SenderMessage
+                        message={obj.message}
+                        timeDelivered="10:29 PM"
+                        key={id}
+                    />
+                );
+            })}
         </div>
     );
 };
