@@ -7,32 +7,96 @@ const MessageForm = () => {
     const [details, setDetails] = profile;
     const [contactList, setContactList] = contacts;
 
+    const array_move = (arr, old_index, new_index) => {
+        if (new_index >= arr.length) {
+            var k = new_index - arr.length + 1;
+            while (k--) {
+                arr.push(undefined);
+            }
+        }
+        arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
+        return arr;
+    };
+
+    const formatAMPM = (date) => {
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+        return strTime;
+    };
+
     const updateNewMessage = (e) => {
         setNewMessage(e.target.value);
     };
 
     const sendMessage = (e) => {
         e.preventDefault();
-        setDetails((oldDetails) => {
-            const oldMessages = oldDetails.messages;
-            const updatedMessages = [
-                ...oldMessages,
-                { message: newMessage, timeDelivered: '2:30 PM' },
-            ];
-            return { ...oldDetails, messages: updatedMessages };
+        const myHeaders = new Headers();
+        myHeaders.append('Content-Type', 'application/json');
+        myHeaders.append(
+            'Authorization',
+            'Basic cmlzaGFibGFtYmEuaXQxQGJ2cC5lZHUuaW46TGFtYnUhMDk4'
+        );
+        const raw = JSON.stringify({
+            messages: [
+                {
+                    body: newMessage,
+                    to: '91' + details.phno,
+                    from: '918178003966',
+                },
+            ],
         });
-        setContactList((oldContactList) => {
-            const newContactList = [...oldContactList];
-            const oldMessages = newContactList[details.id].messages;
-            const updatedMessages = [
-                ...oldMessages,
-                { message: newMessage, timeDelivered: '2:30 PM' },
-            ];
-            newContactList[details.id].messages = updatedMessages;
-            console.log(newContactList[details.id].messages);
-            return newContactList;
-        });
-        setNewMessage('');
+        const requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow',
+        };
+
+        fetch('https://rest.clicksend.com/v3/sms/send', requestOptions)
+            .then((response) => console.log(response.json()))
+            .then(() => {
+                setDetails((oldDetails) => {
+                    const oldMessages = oldDetails.messages;
+                    const updatedMessages = [
+                        ...oldMessages,
+                        {
+                            message: newMessage,
+                            timeDelivered: formatAMPM(new Date()),
+                        },
+                    ];
+                    return { ...oldDetails, messages: updatedMessages };
+                });
+                setContactList((oldContactList) => {
+                    const newContactList = [...oldContactList];
+
+                    for (var i = 0; i < newContactList.length; i++) {
+                        if (newContactList[i].id === details.id) {
+                            const oldMessages = newContactList[i].messages;
+                            const updatedMessages = [
+                                ...oldMessages,
+                                {
+                                    message: newMessage,
+                                    timeDelivered: formatAMPM(new Date()),
+                                },
+                            ];
+                            newContactList[i].messages = updatedMessages;
+                            const recentContactList = array_move(
+                                newContactList,
+                                i,
+                                0
+                            );
+                            return recentContactList;
+                        }
+                    }
+                });
+                setNewMessage('');
+            })
+            .catch((error) => console.log('error', error));
     };
 
     return (

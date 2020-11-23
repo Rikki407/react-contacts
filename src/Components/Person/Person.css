@@ -53,3 +53,14 @@
     right: 10px;
 }
 
+.person.active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-right: 4px solid #0bf9c7;
+    box-shadow: inset -4px 0px 4px -4px #0bf9c7;
+}

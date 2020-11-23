@@ -5,18 +5,27 @@ export const ChatboxContext = createContext();
 export const DetailProvider = (props) => {
     const [details, setDetails] = useState({
         id: 0,
-        imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_1.jpg',
-        name: 'Sacha Griffin',
+        imgSrc:
+            'https://avatars0.githubusercontent.com/u/26832011?s=460&u=3cf40170e111a16b316dc765a05610f38a53a236&v=4',
+        name: 'Rishab Lamba',
+        phno: '8178003966',
+        lastMessage: '2 mins',
+        address: 'Sector 7, Dwarka, Delhi',
         messages: [
             {
                 message:
                     'Suspendisse imperdiet nunc ac pellentes Integer mollis nisi nec nisl fauciubs. Curabitur bibendum ullamcorper lorem, in bibendum dui euismod gravida.',
-                timeDelivered: '10:29 PM',
+                timeDelivered: '10:29 AM',
             },
             {
                 message:
                     'Cras ut ante consequat, luctus massavel, sodales orci.',
-                timeDelivered: '10:30 PM',
+                timeDelivered: '10:30 AM',
+            },
+            {
+                message:
+                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem aliquid facere quam? Omnis aut rerum sit necessitatibus harum, quaerat aliquid deleniti quis blanditiis impedit voluptatum ullam minima officiis vel vitae.',
+                timeDelivered: '10:31 AM',
             },
         ],
     });
@@ -24,48 +33,47 @@ export const DetailProvider = (props) => {
     const [contactList, setContactList] = useState([
         {
             id: 0,
-            imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_1.jpg',
-            name: 'Sacha Griffin',
-            statusMessage: 'Super deep status message blah blah',
+            imgSrc:
+                'https://avatars0.githubusercontent.com/u/26832011?s=460&u=3cf40170e111a16b316dc765a05610f38a53a236&v=4',
+            name: 'Rishab Lamba',
+            phno: '8178003966',
             lastMessage: '2 mins',
+            address: 'Sector 7, Dwarka, Delhi',
             messages: [
                 {
                     message:
                         'Suspendisse imperdiet nunc ac pellentes Integer mollis nisi nec nisl fauciubs. Curabitur bibendum ullamcorper lorem, in bibendum dui euismod gravida.',
-                    timeDelivered: '10:29 PM',
+                    timeDelivered: '10:29 AM',
                 },
                 {
                     message:
                         'Cras ut ante consequat, luctus massavel, sodales orci.',
-                    timeDelivered: '10:30 PM',
+                    timeDelivered: '10:30 AM',
+                },
+                {
+                    message:
+                        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem aliquid facere quam? Omnis aut rerum sit necessitatibus harum, quaerat aliquid deleniti quis blanditiis impedit voluptatum ullam minima officiis vel vitae.',
+                    timeDelivered: '10:31 AM',
                 },
             ],
         },
         {
             id: 1,
             imgSrc:
-                'http://vzkiss.com/demo/chatbox/images/avatar/avatar_2.jpeg',
-            name: 'Debby Jones',
-            statusMessage: 'New day, fresh start, fresh eadaf',
-            lastMessage: '5 mins',
-            messages: [
-                {
-                    message: 'Testing Message',
-                    timeDelivered: '10:29 PM',
-                },
-                {
-                    message:
-                        'Aliquam maximus lacinia nisl nec as. Donec rhoncus efficitur augue, vitae',
-                    timeDelivered: '10:30 PM',
-                },
-            ],
+                'https://media-exp1.licdn.com/dms/image/C4E0BAQFBHfG_J5aAVQ/company-logo_200_200/0?e=2159024400&v=beta&t=uZJ8v19qXse4B7EN1hpp1p1A2fEjdXj27CErGVEMm2E',
+            name: 'Kisan Testing',
+            phno: '9810153260',
+            lastMessage: '',
+            address: 'Sector 20, Gurugram, Haryana',
+            messages: [],
         },
         {
             id: 2,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_3.jpg',
-            name: 'Sacha Griffin',
-            statusMessage: 'Life becomes more peaceful when',
-            lastMessage: '12 mins',
+            name: 'Deby Jones',
+            phno: '8178003967',
+            lastMessage: '',
+            address: 'Sector 52, Noida',
             messages: [],
         },
         {
@@ -73,24 +81,27 @@ export const DetailProvider = (props) => {
             imgSrc:
                 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_4.jpeg',
             name: 'Johhny McGrump',
-            statusMessage: 'Please do not disturb',
-            lastMessage: '34 mins',
+            phno: '8178003968',
+            lastMessage: '',
+            address: 'Paschim Vihar East, New Delhi',
             messages: [],
         },
         {
             id: 4,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_5.jpg',
             name: 'Tommy Tom',
-            statusMessage: 'On vacation for two weeks',
-            lastMessage: '55 mins',
+            phno: '8178003969',
+            lastMessage: '',
+            address: 'Sector 7, Dwarka, Delhi',
             messages: [],
         },
         {
             id: 5,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_1.jpg',
             name: 'Sacha Griffin',
-            statusMessage: 'Super deep status message blah blah',
-            lastMessage: '2 mins',
+            phno: '8178003976',
+            lastMessage: '',
+            address: 'Sector 20, Gurugram, Haryana',
             messages: [],
         },
         {
@@ -98,16 +109,18 @@ export const DetailProvider = (props) => {
             imgSrc:
                 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_2.jpeg',
             name: 'Debby Jones',
-            statusMessage: 'New day, fresh start, fresh eadaf',
-            lastMessage: '5 mins',
+            phno: '8178003986',
+            lastMessage: '',
+            address: 'Sector 52, Noida',
             messages: [],
         },
         {
             id: 7,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_3.jpg',
             name: 'Sacha Griffin',
-            statusMessage: 'Life becomes more peaceful when',
-            lastMessage: '12 mins',
+            phno: '8178003996',
+            lastMessage: '',
+            address: 'Paschim Vihar East, New Delhi',
             messages: [],
         },
         {
@@ -115,24 +128,27 @@ export const DetailProvider = (props) => {
             imgSrc:
                 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_4.jpeg',
             name: 'Johhny McGrump',
-            statusMessage: 'Please do not disturb',
-            lastMessage: '34 mins',
+            phno: '8178004966',
+            lastMessage: '',
+            address: 'Sector 7, Dwarka, Delhi',
             messages: [],
         },
         {
             id: 9,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_5.jpg',
             name: 'Tommy Tom',
-            statusMessage: 'On vacation for two weeks',
-            lastMessage: '55 mins',
+            phno: '8178005966',
+            lastMessage: '',
+            address: 'Sector 20, Gurugram, Haryana',
             messages: [],
         },
         {
             id: 10,
             imgSrc: 'http://vzkiss.com/demo/chatbox/images/avatar/avatar_1.jpg',
             name: 'Sacha Griffin',
-            statusMessage: 'Super deep status message blah blah',
-            lastMessage: '2 mins',
+            phno: '8178006966',
+            lastMessage: '',
+            address: 'Sector 52, Noida',
             messages: [],
         },
     ]);

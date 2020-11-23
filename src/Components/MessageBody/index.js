@@ -14,7 +14,7 @@ const MessageBody = () => {
                 return (
                     <SenderMessage
                         message={obj.message}
-                        timeDelivered="10:29 PM"
+                        timeDelivered={obj.timeDelivered}
                         key={id}
                     />
                 );

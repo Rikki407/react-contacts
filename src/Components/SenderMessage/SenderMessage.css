@@ -1,14 +1,14 @@
 .senderMessage__messageContainer {
     position: relative;
     float: right;
-    width: 320px;
+    width: 380px;
     padding-left: 10px;
 }
 
 .senderMessage__message {
     float: right;
     margin-right: 50px;
-    max-width: 260px;
+    max-width: 300px;
     margin-bottom: 12px;
     border: 1px solid #dedede;
     border-radius: 50px 0 50px 50px;
@@ -20,14 +20,13 @@
 
 .senderMessage__message p {
     margin: 14px 24px;
-    font-size: 11px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    color: gray;
 }
 
 .senderMessage__delivered {
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 10px;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }

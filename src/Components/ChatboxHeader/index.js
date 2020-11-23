@@ -13,7 +13,7 @@ const ChatboxHeader = () => {
             <span className="chatbox__info">
                 <span className="chatbox__name">{details.name}</span>
                 <span className="chatbox__loginStatus">
-                    Online | 11:33 PM, Las Vegas, Nevada
+                    {details.phno + ' | ' + details.address}
                 </span>
                 <button className="chatbox__callBtn" type="button">
                     <svg

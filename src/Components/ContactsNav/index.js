@@ -6,13 +6,13 @@ const ContactsNav = () => {
         <nav className="contactsNav">
             <ul>
                 <li>
-                    <a href="/">Contacts</a>
+                    <a href="#">Contacts</a>
                 </li>
                 <li className="active">
-                    <a href="/">Recent</a>
+                    <a href="#">Recent</a>
                 </li>
                 <li>
-                    <a href="/">
+                    <a href="#">
                         All
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
