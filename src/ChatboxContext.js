@@ -1,12 +1,12 @@
 import React, { useState, createContext } from 'react';
-
+import Rishab from './Rishab.png';
+import Kisan from './Kisan.png';
 export const ChatboxContext = createContext();
 
 export const DetailProvider = (props) => {
     const [details, setDetails] = useState({
         id: 0,
-        imgSrc:
-            'https://avatars0.githubusercontent.com/u/26832011?s=460&u=3cf40170e111a16b316dc765a05610f38a53a236&v=4',
+        imgSrc: Rishab,
         name: 'Rishab Lamba',
         phno: '8178003966',
         lastMessage: '2 mins',
@@ -33,8 +33,7 @@ export const DetailProvider = (props) => {
     const [contactList, setContactList] = useState([
         {
             id: 0,
-            imgSrc:
-                'https://avatars0.githubusercontent.com/u/26832011?s=460&u=3cf40170e111a16b316dc765a05610f38a53a236&v=4',
+            imgSrc: Rishab,
             name: 'Rishab Lamba',
             phno: '8178003966',
             lastMessage: '2 mins',
@@ -59,8 +58,7 @@ export const DetailProvider = (props) => {
         },
         {
             id: 1,
-            imgSrc:
-                'https://media-exp1.licdn.com/dms/image/C4E0BAQFBHfG_J5aAVQ/company-logo_200_200/0?e=2159024400&v=beta&t=uZJ8v19qXse4B7EN1hpp1p1A2fEjdXj27CErGVEMm2E',
+            imgSrc: Kisan,
             name: 'Kisan Testing',
             phno: '9810153260',
             lastMessage: '',
