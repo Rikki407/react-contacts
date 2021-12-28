@@ -1,6 +1,6 @@
 # SMS Chat Application
-<h2>Project Demo Link</h1>
-<a href="https://rishab-chat-demo.netlify.app">Click here </a>to get a quick video demonstration of the whole project
+<h2><a href="https://rishab-chat-demo.netlify.app">Project Link</a></h2>
+
 <img alt="GIF" src="./smsapp-demo.gif"/>
 <h2>Project Description </h2>
 <p>A basic SMS application to comunicate between participants</p>
