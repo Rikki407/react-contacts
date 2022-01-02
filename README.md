@@ -3,7 +3,7 @@
 
 <img alt="GIF" src="./smsapp-demo.gif"/>
 <h2>Project Description </h2>
-<p>A basic SMS application to comunicate between participants</p>
+<p>A basic SMS application to comunicate between participants built with React</p>
 <h3>Steps to Run</h3>
 
 - Run `npm install` in terminal to install the dependecies
