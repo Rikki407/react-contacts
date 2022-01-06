@@ -1,5 +1,5 @@
 # SMS Chat Application
-<h2><a href="https://rishab-chat-demo.netlify.app">Project Link</a></h2>
+<h2><a href="https://sms-chat.netlify.app/">Project Link</a></h2>
 
 <img alt="GIF" src="./smsapp-demo.gif"/>
 <h2>Project Description </h2>
